@@ -15,4 +15,22 @@ export default makeStyles(() => ({
   image: {
     marginLeft: '15px',
   },
+  userNameField: {
+    color: 'rgba(0,183,255, 1)',
+    margin: '25px 40px',
+  },
+  userNameBox: {
+    //border: '1px solid black',
+    borderRadius: 15,
+    display: 'flex',
+    margin: '150px 190px',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 65,
+  },
+  userNameTextInput: {
+    paddingBottom: '17px',
+  },
+  
 }));
