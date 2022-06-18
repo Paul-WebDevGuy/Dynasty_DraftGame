@@ -5,18 +5,15 @@ import useStyles from './styles';
 import Picks from './Picks/Picks';
 
 
-const Pick = () => {
+const Pick = (props) => {
   const classes = useStyles();
 
   return (
     <Paper className={classes.divStyle}>
-      <Typography className={classes.pickField} variant="h4">Pick 1</Typography>
-      <Typography className={classes.pickLetter} variant="h6">A</Typography>
-        <Picks />
-      <Typography className={classes.pickLetter} variant="h6">B</Typography>
-        <Picks />
-      <Typography className={classes.pickLetter} variant="h6">C</Typography>
-        <Picks />
+      <Typography className={classes.pickField} variant="h4">Pick {props.pickNumber}</Typography>
+        <Picks pickLetter='A'/>
+        <Picks pickLetter='B'/>
+        <Picks pickLetter='C'/>
     </Paper>
   );
 }

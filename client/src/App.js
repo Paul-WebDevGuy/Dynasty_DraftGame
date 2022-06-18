@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
-import NameBox from './components/NameBox/NameBox';
+import NameBox from './components/Form/NameBox/NameBox';
 import draft_logo from './images/draft_logo.png'; 
 import useStyles from './styles';
 
@@ -23,7 +23,6 @@ const App = () => {
         <Typography className={classes.heading} variant="h2" align="center">Dynasty Draft Game</Typography>
         <img className={classes.image} src={draft_logo} alt="draft_logo" height="60" />
       </AppBar>
-      <NameBox />
       <Form />
     </Container>
   );

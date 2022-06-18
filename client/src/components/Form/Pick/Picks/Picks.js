@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, MenuItem } from '@material-ui/core';
+import { TextField, MenuItem, Typography } from '@material-ui/core';
 
 import useStyles from './styles';
 
@@ -19,7 +19,7 @@ const names = [
 ];
 
 
-const Picks = () => {
+const Picks = (props) => {
   const classes = useStyles();
   const [playerName, setPlayer] = React.useState('');
 
@@ -28,20 +28,23 @@ const Picks = () => {
   };
 
   return (
-      <TextField
-        className={classes.pickSelect}
-        size="small"
-        label=""
-        select
-        value={playerName}
-        onChange={handleChange}
-      >
-        {names.map((name) => (
-          <MenuItem key={name} value={name}>
-            {name}
-          </MenuItem>
-        ))};
-      </TextField>
+      <div className={classes.divStyle}>
+        <Typography className={classes.pickLetter} variant="h6">{props.pickLetter}</Typography>
+        <TextField
+          className={classes.pickSelect}
+          size="small"
+          label=""
+          select
+          value={playerName}
+          onChange={handleChange}
+        >
+          {names.map((name) => (
+            <MenuItem key={name} value={name}>
+              {name}
+            </MenuItem>
+          ))};
+        </TextField>
+      </div>
   );
 }
 
