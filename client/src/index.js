@@ -7,6 +7,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 import App from './App';
 
+//create a store for all the database to be used in this app
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(

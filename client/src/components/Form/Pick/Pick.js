@@ -6,6 +6,7 @@ import Picks from './Picks/Picks';
 
 
 const Pick = (props) => {
+  
   const classes = useStyles();
 
   return (
